@@ -62,4 +62,10 @@ second_number = input("Enter a number: \n")
 result = float(first_number) ** float(second_number)
 print(f"{first_number} ** {second_number} = {result}0")
 
+#Floor Division
+print("Enter two numbers for floor division");
+first_number = input("Enter a number: \n")
+second_number = input("Enter a number: \n")
+result = float(first_number) // float(second_number)
+print(f"{first_number} // {second_number} = {result}0") 
 
