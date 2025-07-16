@@ -34,27 +34,32 @@ second_number = input("Enter a number: \n")
 result = float(first_number) + float(second_number)
 print(f"{first_number} + {second_number} = {result}0")
 
-#Addition
+#Subtract
 print("Enter two numbers to Subtract");
 first_number = input("Enter a number: \n")
 second_number = input("Enter a number: \n")
 result = float(first_number) - float(second_number)
 print(f"{first_number} - {second_number} = {result}0")
 
-#Addition
+#Multipy
 print("Enter two numbers to Multiply");
 first_number = input("Enter a number: \n")
 second_number = input("Enter a number: \n")
 result = float(first_number) * float(second_number)
 print(f"{first_number} * {second_number} = {result}0") 
 
-#Addition
+#Divide
 print("Enter two numbers to Divide");
 first_number = input("Enter a number: \n")
 second_number = input("Enter a number: \n")
 result = float(first_number) / float(second_number)
 print(f"{first_number} / {second_number} = {result}0") 
 
-
+#Exponatial
+print("Enter two numbers for exponatial");
+first_number = input("Enter a number: \n")
+second_number = input("Enter a number: \n")
+result = float(first_number) ** float(second_number)
+print(f"{first_number} ** {second_number} = {result}0")
 
 
