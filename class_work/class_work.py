@@ -55,8 +55,8 @@ second_number = input("Enter a number: \n")
 result = float(first_number) / float(second_number)
 print(f"{first_number} / {second_number} = {result}0") 
 
-#Exponatial
-print("Enter two numbers for exponatial");
+#Exponential
+print("Enter two numbers for exponential");
 first_number = input("Enter a number: \n")
 second_number = input("Enter a number: \n")
 result = float(first_number) ** float(second_number)
