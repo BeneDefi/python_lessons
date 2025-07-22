@@ -26,7 +26,7 @@ print(f"Your Rice will be ready {convert_to_int} min(s) {name}")
 print("4. I will let you know when its ready...")
 
 customers.append(customer)
-
+#customers = [customer]
 minutes_in_seconds=60
 time.sleep(convert_to_int * minutes_in_seconds)
 print(customer)
