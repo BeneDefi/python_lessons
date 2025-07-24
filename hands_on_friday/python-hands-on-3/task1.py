@@ -12,7 +12,22 @@ meals = ["Gwote", "Masa", "Tuwon Acha", "Fura da Nono", "Kunu", "Miyan Kuka"]
 """
 
 meals = ["Gwote", "masa", "Tuwon Acha", "Fura da Nono", "kunu", "Miyan kuka"]
-meals 
+meals.insert(4, "Miyan Taushe")
+print(meals)
+
+meals.remove("masa")
+print(meals)
+
+meals.remove("Fura da Nono")
+meals.append("Fura da Nono")
+print(meals)
+
+middle_index = len(meals) // 2
+meal_at_the_center = meals[middle_index]
+print(meal_at_the_center)
+
+meals.sort()
+print(meals)
 
 
 
