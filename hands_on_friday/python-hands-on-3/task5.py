@@ -12,7 +12,32 @@
 """
 
 friends = ["Aisha", "Daniel", "Esther", "John", "Mary", "Paul", "Ruth"]
-my_list = [10, 20, 30, 40, 50]
+friends.insert(4, "Kemi")
+print(friends)
+
+friends.remove(friends[1])
+print(friends)
+
+'''
+friends.remove(friends[0])
+friends.insert(0, "Aisha_M")
+'''
+friends[0] = ("Aisha_M")
+print(friends)
+
+friends.append("Zainab")
+print(friends)
+
+new_friends = friends[0:3]
+print(new_friends)
+
+print(f"The position of Paul in the list is at index:", friends.index("Paul"))
+
+friends.sort(reverse=True)
+print(friends)
+
+
+
 
 
 
