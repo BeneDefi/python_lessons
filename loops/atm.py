@@ -53,11 +53,11 @@ match student_record:
             grade = "A"     
             print(f"Dear {student_record['name']}, your grade is {grade}")
     case {"name":student_name, "score":student_score}:
-        if student_record["score"] >= 60 or  student_record["score"] <= 70:
+        if student_record["score"] >= 60 and student_record["score"] <= 70:
             grade = "B"
             print(f"Dear {student_record['name']}, your grade is {grade}")
     case {"name":student_name, "score":student_score}:
-        if student_record["score"] >= 0 or  student_record["score"] <= 60:
+        if student_record["score"] >= 0 and student_record["score"] <= 60:
             grade = "Fail"
             print(f"Dear {student_record['name']}, your grade is {grade}")
     case _:
