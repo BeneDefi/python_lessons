@@ -29,7 +29,8 @@ def all_functions(user_choice):
 	elif user_choice == 2:
 		name = input("Enter product name to be updated: ").strip().lower()
 		quantity = int(input("Enter quantity to update: "))
-		update_stock(store, name, quantity)
+		action = int(input("Enter '1' to add and '2' to reduce quantity: "))
+		update_stock(store, name, quantity, action)
 	elif user_choice == 3:
 		name = input("Enter product name to purchase: ").strip().lower()
 		quantity = int(input("Enter quantity of products you wish to purchase: "))
@@ -43,7 +44,7 @@ def all_functions(user_choice):
 	elif user_choice == 7:
 		terminate_session()
 	else:
-		print("Invalid Choice: Choose from 1 - 5.")
+		print("Invalid Choice: Choose from 1 - 7.")
 
 
 def add_product(store, name, price, quantity):
@@ -63,14 +64,24 @@ def add_product(store, name, price, quantity):
 			print(store)
 
 
-def update_stock(store, name, quantity):
+def update_stock(store, name, quantity, action):
 	if name in store:
 		if quantity <= 0:
 			print("Quantity cannot be negative")
 		else:
-			store[name]["quantity"] = quantity
-			print(f"Stock for {name.capitalize()} updated to {quantity}.")
-			print(store)
+			if action == 1:
+				store[name]["quantity"] += quantity
+				print(f"Stock for {name.capitalize()} updated to {quantity}.")
+				print(store)
+			elif action == 2:
+				if quantity > store[name]["quantity"]:
+					print("Input quantity exceeds available quatity to reduce!")
+				else:
+					store[name]["quantity"] -= quantity
+					print(f"Stock for {name.capitalize()} updated to {quantity}.")
+					print(store)
+			else:
+				print("Inavild choice: Choose 1 OR 2.")
 	else:
 		print(f"Sorry {name.capitalize()} not in store to update!")
 
