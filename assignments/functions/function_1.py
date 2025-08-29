@@ -13,7 +13,9 @@ def start():
 			2. Update Stock.
 			3. Sell Product.
 			4. Display inventory.
-			5. Exit
+			5. Most Expensive Product
+			6. Total Potential Sales
+			7. Exit
 			""")
 		user_choice = int(input("Enter choice: "))
 		all_functions(user_choice)
@@ -35,6 +37,10 @@ def all_functions(user_choice):
 	elif user_choice == 4:
 		display_inventory(store)
 	elif user_choice == 5:
+		most_expensive_product(store)
+	elif user_choice == 6:
+		total_potential_sales(store)
+	elif user_choice == 7:
 		terminate_session()
 	else:
 		print("Invalid Choice: Choose from 1 - 5.")
@@ -87,6 +93,24 @@ def display_inventory(store_dict):
 	print("\n---Inventory---")
 	for product_name, product_data in store_dict.items():
 		print(f"Product Name: {product_name.capitalize()} : Product Price :{product_data['price']:.2f}, Product Quantity :{product_data['quantity']} ")
+
+def most_expensive_product(store):
+	highest_price = 0
+	most_expensive = None
+	for product_name, product_data in store.items():
+		if product_data["price"] > highest_price:
+			highest_price = product_data["price"]
+			most_expensive = (product_name, product_data)
+	if most_expensive:
+		print(f"The most expensive product is '{most_expensive[0]}': {most_expensive[1]}")
+	else:
+		print("No products in store.")
+
+def total_potential_sales(store):
+	total = 0
+	for total_value in store.values():
+		total += total_value["price"] * total_value["quantity"]
+	print(total)
 
 def terminate_session():
 	print("Terminating Session...")
