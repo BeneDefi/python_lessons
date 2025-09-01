@@ -24,3 +24,18 @@ The  function should
 
 Returns a list of employees working on that day.
 """
+
+shifts = {
+        "Alice": ["Monday", "Wednesday"],
+        "Bob": ["Tuesday", "Thursday"],
+        "Charlie": ["Monday", "Friday"]
+    }
+
+employee = input("Enter a name: ").strip().capitalize()
+day = input("Enter a name: ").strip().lower()
+def add_shift(employee, day):
+	for name, shifts in shifts:
+		if employee in name:
+			print("yes")
+
+

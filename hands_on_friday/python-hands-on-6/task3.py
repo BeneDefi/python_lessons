@@ -18,3 +18,21 @@ print(calculate_grade(60))   # D
 print(calculate_grade(70))   # C
 print(calculate_grade(89))   # B
 """
+
+#score = int(input("Enter score: "))
+
+def calculate_grade(score):
+	if score >= 90 and score <= 100:
+		return "A"
+	elif score >= 80 and score <= 89:
+		return "B"
+	elif score >= 70 and score <= 79:
+		return "C"
+	elif score >= 60 and score <= 69:
+		return "D"
+	elif score > 0  and score <= 60:
+		return "F"
+	else:
+		return "Invalid input"
+
+print(calculate_grade(1))

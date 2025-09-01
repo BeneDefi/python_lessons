@@ -1,15 +1,15 @@
 #You are given a list of bank transactions:
 
-"""transactions = [
-    {"id": 1, "amount": 200, "type": "deposit"},
-    {"id": 2, "amount": 50, "type": "withdraw"},
-    {"id": 3, "amount": 500, "type": "deposit"}
-]
-"""
-"""function Signature
-def filter_transactions(transactions, criteria):
-    pass
-"""
+#transactions = [
+#    {"id": 1, "amount": 200, "type": "deposit"},
+#    {"id": 2, "amount": 50, "type": "withdraw"},
+#   {"id": 3, "amount": 500, "type": "deposit"}
+#]
+
+#function Signature
+#def filter_transactions(transactions, criteria):
+#    pass
+
 #Requirement(s):
 #The function should return a list of transactions that match the given criteria.
 
@@ -39,10 +39,14 @@ transactions = [
 	{"id": 3, "amount": 500, "type": "deposit"}
 	]
 
+criteria = input("String or numeric: ")
 
 def filter_transactions(transactions, criteria):
-	for transaction in transactions:
-		print(transaction)
-	
+	if criteria == "string":
+		for transaction in transactions.values():
+			print(transaction["type"])
+	elif criteria == "numeric":
+		for transaction in transactions.values():
+			print(transaction)
 
 filter_transactions(transactions, criteria)
