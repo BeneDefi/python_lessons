@@ -7,17 +7,17 @@ def start():
 			3. Wealth
 			""")
 		choice = int(input("Enter your choice: "))
-		all_functions(choice)
+		print(all_functions(choice))
 
 def all_functions(choice):
 	if choice == 1:
-		print("I Love Me.")
+		return "I Love Me."
 	elif choice == 2:
-		print("I Am Healthy.")
+		return "I Am Healthy."
 	elif choice == 3:
-		print("I am Wealthy beyound imaginations")
+		return "I am Wealthy beyound imaginations"
 	else:
-		print("Thank You God!")
+		return "Thank You God!"
 	
 
 start()
